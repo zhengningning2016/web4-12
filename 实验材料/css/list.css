@@ -1,0 +1,170 @@
+*{
+margin-top:0;
+margin-bottom:0;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+border:0;
+font-family:'宋体';	
+}
+ul,ol,li{
+	list-style:none;
+}
+body{
+	font-size:12px;
+	background-image:url(../images/bodybg.gif);
+	background-repeat:repeat-x;
+}
+a{
+	text-decoration:none;
+}
+a.hover{
+	text-decoration:underline;
+}
+#div1{
+    width:1600px;
+    height:200px;
+    background-image:url(../images/bg.gif);
+}
+#img1{
+	padding-left:200px;
+	padding-top:50px;
+}
+#div11{
+	
+	width:1600px;
+    height:30px;
+    margin-top:15px;
+    background-image:url(../images/nav.jpg);
+    background-repeat:repeat-x;
+}
+#shouye{
+	color:yellow;
+	padding-top:6px;
+}
+.daohang{
+	color:#FFFFFF;
+	width:90px;
+	padding-top:6px;
+	
+}
+.fen{
+	color:#FFFFFF;
+	width:10px;
+	align:center;
+	padding-top:6px;
+}
+#input{
+	padding-top:6px;
+	margin-right:100px;
+}
+#sousuo{
+	color:#FFFFFF;
+	background-color:#000000;
+}
+#mianbaoxie{
+	width:1000px;
+	height:40px;
+	line-height:40px;
+	padding-left:43px;
+}
+#div2{
+	margin-bottom:-70px;
+	width:1000px;
+	height:550px;
+}
+#div21{
+	width:200px;
+	height:550px;
+	float:left;
+}
+#div211{
+	border:1px solid #c9baa5;
+	background-image:url(../images/bg.png);
+	margin-bottom:18px;
+}
+#img2{
+	margin-left:30px;
+
+}
+.peixun{
+	text-align:center;
+	font-size:16px;
+    line-height:35px;
+    color:#844200;
+}
+.peia.link{
+	font-weight:900;
+	color:#844200;
+}
+#div212{
+	border:1px solid #c9baa5;
+	background-image:url(../images/bg.png);
+	margin-bottom:18px;
+}
+
+.zuijin{
+	text-align:center;
+	font-size:16px;
+    line-height:35px;
+    color:#844200;
+}
+#div22{
+	width:760px;
+	height:550px;
+	float:left;
+	margin-left:30px;
+}
+#div222{
+	overflow:hidden;
+	padding-top:10px;
+	padding-left:50px;
+	color:#844200;
+	font-size:18px;
+	width:760px;
+	height:45px;
+	background-image:url(../images/listtitle.png);
+    background-repeat:no-repeat;
+}
+#div221{
+	margin-left:200px;
+}
+.zhaosheng{
+	font-size:14px;
+	line-height:30px;
+	color:#844200;
+	list-style-type:circle;
+}
+.shu{
+	border:1px solid #844200;
+	font-size:14px;
+	width:30px;
+	height:20px;
+	margin:3px;
+	padding:3px 5px;
+	display:inline;
+}
+#div3{
+	width:1600px;
+	height:150px;
+    background-image:url(../images/foot.gif);
+}
+#div31
+{
+	font-size:14px;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    color:#844200;
+    margin-top:70px;
+}
+#img7{
+	padding-left:540px;
+}
+.pp{
+	line-height:25px;
+	font-size:10px;
+	text-align:center;
+	color:#BB5E00;
+}
+border:1px solid red;
