@@ -1,0 +1,74 @@
+
+a:link{direction: none;}
+#banner{
+	height:200px;
+	width:1600px;
+}
+#back{
+    padding-left:5px;
+    float:center;
+}
+#back img{
+	width:1320px;
+	height:190px;
+}
+#guide{
+	height:40px;
+	font-weight: 800;
+	font-size:18px;
+	border:1px gray solid;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color:#D90119;
+	padding-top:10px;
+	padding-bottom: -20px;
+	padding-left: 300px;
+	padding-right: 300px;
+}
+#bread{
+	padding-top: 10px;
+	padding-left: 230px;
+}
+#all{
+	margin-top: 20px;
+	width:900px;
+	height:1000px;
+	margin-left: 230px;
+}
+#title{
+	width:900px;
+	margin-top: 30px;
+	float:left;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+
+}
+#allcontent{
+	padding-left:80px;
+	padding-right:80px;
+	padding-top: 60px;
+	margin-top: 60px;
+	font-size: 13px;
+	line-height: 30px;
+	color:gray;
+	text-indent: 2em;
+}
+#littleimg{
+	padding-right:200px;
+	float: right;
+}
+#bottom{
+    width:840px;
+    margin-top: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+	height: 130px;
+	border:1px black solid;
+	float:left;
+	background-color:#003333;
+	text-align: center;
+	color:white;
+	padding-top: 20px;
+	font-size:11px;
+}
