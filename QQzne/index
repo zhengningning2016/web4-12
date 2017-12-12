@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> New Document </title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #main{
+        width:1000px;
+        margin:auto;
+        }
+        #smallpic{
+        height:120px; 
+        }
+        img{
+        float:left; 
+        margin-right:10px; 
+        margin-bottom:10px;
+        }
+        #smallpic img:hover{
+            cursor:pointer; /*设定鼠标的形状为小手*/
+        }
+        .pb{
+         border:3px solid #14c3fd;
+        } 
+    </style>
+
+    <script type="text/javascript">     
+        // function showbig1(){
+        // 	for(var i=0;i<10;i++){
+        //         document.getElementById("smallpic").childNodes[i].border=null;
+        // 	}
+        // 	document.getElementById("bigpic").src=document.getElementById("smallpic1").src;
+        // 	document.getElementById("smallpic1").border='4px';
+        // 	document.getElementById("smallpic1").style.borderColor='yellow';
+        // }
+        // function showbig2(){
+        // 	for(var i=0;i<10;i++){
+        //         document.getElementById("smallpic").childNodes[i].border=null;
+        // 	}
+        // 	document.getElementById("bigpic").src=document.getElementById("smallpic2").src;
+        // 	document.getElementById("smallpic2").border='4px';
+        // 	document.getElementById("smallpic2").style.borderColor='yellow';
+        // }
+        // function showbig3(){
+        // 	for(var i=0;i<10;i++){
+        //         document.getElementById("smallpic").childNodes[i].border=null;
+        // 	}
+        // 	document.getElementById("bigpic").src=document.getElementById("smallpic3").src;
+        // 	document.getElementById("smallpic3").border='4px';
+        // 	document.getElementById("smallpic3").style.borderColor='yellow';
+        // }
+        // function showbig4(){
+        // 	for(var i=0;i<10;i++){
+        //         document.getElementById("smallpic").childNodes[i].border=null;
+        // 	}
+        // 	document.getElementById("bigpic").src=document.getElementById("smallpic4").src;
+        // 	document.getElementById("smallpic4").border='4px';
+        // 	document.getElementById("smallpic4").style.borderColor='yellow';
+        // }
+        // function showbig5(){
+        // 	for(var i=0;i<10;i++){
+        //         document.getElementById("smallpic").childNodes[i].border=null;
+        // 	}
+        // 	document.getElementById("bigpic").src=document.getElementById("smallpic5").src;
+        // 	document.getElementById("smallpic5").border='4px';
+        // 	document.getElementById("smallpic5").style.borderColor='yellow';
+        // }
+        
+
+        
+        
+        function showbig(pic){
+            var imgs=document.getElementById("smallpic").getElementsByTagName("img");
+            for(var i;i<imgs.length;i++){
+                imgs[i].className=' ';
+            }
+            var bigpic=document.getElementById("bigpic");
+            bigpic.src=pic.src;
+            pic.className="pb";
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="smallpic">
+            <img src="images/s2.jpg" width="180" height="100" onclick="showbig(this);" id="smallpic1"/>
+            <img src="images/s3.jpg" width="180" height="100" onclick="showbig(this);" id="smallpic2"/>
+            <img src="images/s4.jpg" width="180" height="100" onclick="showbig(this);" id="smallpic3"/>
+            <img src="images/s5.jpg" width="180" height="100" onclick="showbig(this);" id="smallpic4"/>
+            <img src="images/s6.jpg" width="180" height="100" onclick="showbig(this);" id="smallpic5"/>
+        </div>
+        <div >
+            <img id="bigpic" src="images/s1.jpg" width="940px" />
+        </div>
+    </div>
+</body>
+</html>
