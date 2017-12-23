@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<title>用户注册</title>
+    <meta charset="UTF-8"/>
+    <script src="jquery-3.2.1.slim.min.js" ></script>
+    
+</head>
+<body>
+用户名:<input id="userName" ><br/>
+密码:<input  class='password' type="password"><br/>
+密码:<input class='password' type="password"><br/>
+<button onclick="sub()">注册</button>
+<script>
+    var userName;
+    var password;
+    var password2;
+    function sub() {
+        userName = document.getElementById('userName').value;
+        password = document.getElementsByClassName('password')[0].value;
+        password2 = document.getElementsByClassName('password')[1].value;
+        var $error = $('<span>用户名不能为空</span>');
+        
+        if (userName.length == 0) {
+        	var $error = $('<span>用户名不能为空</span>');
+        	$(document).ready(function(){
+			    $("button").click(function(){
+				        $("#userName").append($error);
+			        })
+		    });
+
+            return;
+        }
+ 
+        if (password.length==0) {
+            var $error1 = $('<span>密码不能为空</span>');
+        	$(document).ready(function(){
+			    $("button").click(function(){
+				        $(".password").append($error1);
+			        })
+		    });
+            return;
+        }
+ 
+        if (password !== password2) {
+            alert('两次密码输入不一样,请重新输入');
+            return;
+        }
+ 
+        alert('注册成功');
+ 
+    }
+</script>
+</body>
+ 
+</html>
