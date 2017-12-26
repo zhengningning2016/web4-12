@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+	<title>my_design</title>
+    <meta charset="UTF-8"/>
+    <script src="jquery-3.2.1.min.js" ></script>
+    <style type="text/css">
+        #bar{
+            width:1330px;
+            height:50px;
+            padding-left:20px;
+            background-color: #FAF0E6;
+            opacity:0.8;
+			filter:alpha(opacity=40);
+			padding-top:10px;
+			border-bottom: 5px double grey;
+        }
+        #myform{
+            width:280px;
+            height:575px;
+            float:right;
+            margin-right:10px;
+            background-image: url("myimage/biankuang.png");
+            background-size:100% 100%;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+        #ppt{
+            float:left;
+        }
+        #textarea{
+            width:200px;
+            height:50px;
+        }
+        table{
+        	font-family: '幼圆';
+        }
+        #nav{
+        	width:1300px;
+        	list-style: none;
+        	align: content;
+        	margin: 0 auto;
+        }
+        #nav li{
+        	width:250px;
+        	float:left;
+            font-size: 19px;
+            font-weight:15px;
+            font-family: '幼圆'；
+        }
+        #nav li ul{
+    		display: none;
+   		    position: absolute;
+   		    float:left;
+   		    list-style: none;
+   		    width:30px;
+            background-color: #FFAEB9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(1,1,1,0.3);
+}
+        }
+        #nav a { 
+			display: block; 
+			text-align:center; 
+		} 
+		#nav a:link { 
+	        text-decoration:none; 
+		}
+		#nav li:hover ul{
+			display:block;
+		}
+        #nav li:hover a{
+            font-color: #FA8072;
+            font-size: 24px;
+        }
+        #nav li ul li a:hover{
+        	background-color: #f1f1f1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="bar">
+	    <ul id="nav"> 
+	    	<li><a href="#">浏览使用指南</a> 
+	    		<ul> 
+	                <li><a href="#" _fcksavedurl="#">说明</a></li> 
+	    		    <li><a href="#" _fcksavedurl="#">指南</a></li>   
+	    		</ul> 
+	    	</li> 
+	    	<li><a href="#">城市或目的地</a> 
+	    		<ul> 
+	                <li><a href="#" _fcksavedurl="#">城市选择</a></li> 
+	    		    <li><a href="#" _fcksavedurl="#">定位选择</a></li>  
+	    		</ul> 
+	    	</li>
+	    	<li><a href="#">入住离开日期</a> 
+	    		<ul> 
+	                <li><a href="#" _fcksavedurl="#">入住日期</a></li> 
+	    		    <li><a href="#" _fcksavedurl="#">离开日期</a></li>  
+	    		</ul> 
+	    	</li>
+	    	<li><a href="#">免费发布房间</a> 
+	    		<ul> 
+	                <li><a href="#" _fcksavedurl="#">发布说明</a></li> 
+	    		    <li><a href="#" _fcksavedurl="#">现在发布</a></li>   
+	    		</ul> 
+	    	</li>
+	    	<li><a href="#">相关搜索→</a> 
+	    		<ul> 
+	                <li><a href="#" _fcksavedurl="#">one</a></li> 
+	    		    <li><a href="#" _fcksavedurl="#">two</a></li>  
+	    		</ul> 
+	    	</li>
+	    </ul>
+    </div>
+
+    <div id="secendrow">
+        <div id="ppt">
+            <img src="myimage/1.jpg" width="1010px" height="590px" id="showpic"/>
+        </div>
+        <div id="myform">
+            <form>
+                <table width=250px height=450px>
+                    <tr>
+                        <td>username:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="username" name="usermane" value = "" />
+                            <span id="errorTip"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>password:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="passwd"></td>
+                    </tr>
+
+                    <tr>
+                        <td>confirm:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" id="passps"/>
+                            <span id="errorPass"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="number"/>
+                            <span id="errorNum"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="注册"> 
+                            <input type="button" value="登录">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>comment：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea id="textarea"></textarea>
+                            <span id="errortext"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>
+                    		<input name = "view" type = "radio" value = ""/>满意
+                    		<input name = "view" type = "radio" value = ""/>不满意
+                    	</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        //nav
+        function menuFix(){
+        	var sfEls = document.getElementById("nav").getElementsByTagName("li");
+        	for(var i=0; i<sfEls.length; i++){
+        		sfEls[i].onmouseover = function(){
+        			this.className += (this.className.length > 0? " " : "") + "sfhover";
+        		}
+        		sfEls[i].onMouseDown=function() { 
+					this.className+=(this.className.length>0? " ": "") + "sfhover"; 
+				} 
+				sfEls[i].onMouseUp=function() { 
+					this.className+=(this.className.length>0? " ": "") + "sfhover"; 
+				} 
+				sfEls[i].onmouseout=function() { 
+					this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"), ""); 
+				} 
+        	}
+        }
+        window.onload=menuFix; 
+
+        //PPT
+        var curIndex=0;
+        var arr = new Array();
+        arr[0]="1.jpg"; 
+        arr[1]="2.jpg"; 
+        arr[2]="3.jpg"; 
+        arr[3]="4.jpg";
+        arr[4]="5.jpg"; 
+        arr[5]="6.jpg";  
+        setInterval(changeImg,2000);
+        function changeImg(){
+            var obj = document.getElementById("showpic");
+            if(curIndex == arr.length-1){
+                curIndex = 0;
+            }
+            else{
+                curIndex += 1;
+            }
+            obj.src = "myimage/" + arr[curIndex];
+        }
+
+        //form action
+         window.onload = function(){
+        	var username = document.getElementById("username");
+        	username.onblur = checkUsername;
+        	var password = document.getElementById("passps");
+        	passps.onblur = checkPassword;
+        	var number = document.getElementById("number");
+        	number.onblur = checkNumber;
+        	var textarea = document.getElementById("textarea");
+        	textarea.onblur = checktext;
+        }
+
+        function checkUsername(){
+        	var username = document.getElementById("username");
+        	if(username.value.length == 0)
+        	{
+        		document.getElementById("errorTip").style = "color:red";
+        		document.getElementById("errorTip").innerHTML = "*必填";
+        	}
+        	else
+        	{
+        		document.getElementById("errorTip").style = "color:green";
+        		document.getElementById("errorTip").innerHTML = "通过";
+        	}
+        }
+
+        function checkPassword(){
+        	var passwd = document.getElementById("passwd").value;
+        	var passps = document.getElementById("passps").value;
+        	if(passwd == passps)
+        	{
+        		document.getElementById("errorPass").style = "color:green";
+        		document.getElementById("errorPass").innerHTML = "通过";
+        	}
+        	else
+        	{
+        		document.getElementById("errorPass").style = "color:red";
+        		document.getElementById("errorPass").innerHTML = "错误";
+        	}
+        }
+
+        function checkNumber(){
+        	var number = document.getElementById("number");
+        	if(number.value.length != 11)
+        	{
+        		document.getElementById("errorNum").style = "color:red";
+        		document.getElementById("errorNum").innerHTML = "错误";
+        	}
+        	else
+        	{
+        		document.getElementById("errorNum").style = "color:green";
+        		document.getElementById("errorNum").innerHTML = "通过";
+        	}
+        }
+
+        function checktext(){
+        	var textarea = document.getElementById("textarea").value;
+        	if(textarea.length>100){
+        		document.getElementById("errortext").style='color:red';
+        		document.getElementById("errortext").innerHTML="字数超限！";
+        	}
+        }
+
+
+        
+    </script>
+</body>
+ 
+</html>
